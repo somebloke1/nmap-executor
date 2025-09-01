@@ -95,6 +95,20 @@ documents:
       loading: "init-time"
       dependencies: ["CLAUDE.md"]
 
+  # Session Succession Documents
+  succession_protocol:
+    - name: "SUCCESSION.md"
+      purpose: "Operational state preservation and continuity across sessions"
+      priority: "critical"
+      loading: "init-time"
+      dependencies: ["CLAUDE.md"]
+
+    - name: "current-context.md"
+      purpose: "Session-specific operational tracking and context management"
+      priority: "high" 
+      loading: "init-time"
+      dependencies: ["SUCCESSION.md"]
+
   # System Architecture Documents
   system_architecture:
     - name: "directory_structure.md"
@@ -154,6 +168,8 @@ loading_strategy:
     - "notation_guide.md"
     - "glyph_system.md"
     - "memory_practices.md"
+    - "SUCCESSION.md"
+    - "current-context.md"
 
   lazy_loading_triggers:
     agent_coordination_needed: ["orchestrator_delegation_patterns.md", "agent_task_matching.md"]
