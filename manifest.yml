@@ -1,0 +1,200 @@
+# manifest.yml
+
+```yaml
+# Symbolic Governance Framework Registry
+# nmap-executor Project - Generated Framework
+
+framework:
+  name: "Consciousness-Based MCP Development Governance"
+  version: "1.0.0"
+  project: "nmap-executor"
+  philosophical_foundation: "Transcendental Method Operations"
+  methodology: "Test-Driven Development (TDD)"
+
+core_identity:
+  orchestrator: "Claude Code"
+  authority_pattern: "Consciousness-Centered Coordination"
+  decision_model: "Four-Level Operational Structure"
+
+documents:
+  # Core Framework Documents
+  core_framework:
+    - name: "CLAUDE.md"
+      purpose: "Primary orchestrator identity and operational foundation"
+      priority: "critical"
+      loading: "init-time"
+      dependencies: []
+
+    - name: "orchestrator_identity.md"
+      purpose: "Detailed orchestrator role definition and authority structure"
+      priority: "critical"
+      loading: "init-time"
+      dependencies: ["CLAUDE.md"]
+
+    - name: "notation_guide.md"
+      purpose: "Symbolic notation system for governance expression"
+      priority: "high"
+      loading: "init-time"
+      dependencies: []
+
+    - name: "glyph_system.md"
+      purpose: "Consciousness-based symbolic glyph definitions"
+      priority: "high"
+      loading: "init-time"
+      dependencies: ["notation_guide.md"]
+
+  # Coordination Documents
+  coordination:
+    - name: "orchestrator_delegation_patterns.md"
+      purpose: "Task delegation protocols and authority boundaries"
+      priority: "high"
+      loading: "lazy"
+      dependencies: ["orchestrator_identity.md", "agent_task_matching.md"]
+      trigger_conditions: ["agent_coordination_needed"]
+
+    - name: "agent_task_matching.md"
+      purpose: "Agent capability and task alignment methodology"
+      priority: "high"
+      loading: "lazy"
+      dependencies: ["glyph_system.md"]
+      trigger_conditions: ["task_assignment_needed"]
+
+    - name: "agent_selection_for_task.md"
+      purpose: "Operational protocols for agent selection"
+      priority: "medium"
+      loading: "lazy"
+      dependencies: ["agent_task_matching.md", "orchestrator_delegation_patterns.md"]
+      trigger_conditions: ["agent_selection_needed"]
+
+    - name: "external_lm_consultation.md"
+      purpose: "External language model consultation protocols"
+      priority: "medium"
+      loading: "lazy"
+      dependencies: ["orchestrator_identity.md"]
+      trigger_conditions: ["external_consultation_needed", "knowledge_gap_identified"]
+
+  # Development Process Documents
+  development_process:
+    - name: "git_workflow.md"
+      purpose: "Version control protocols with TDD integration"
+      priority: "high"
+      loading: "lazy"
+      dependencies: ["CLAUDE.md"]
+      trigger_conditions: ["git_operation_needed", "commit_preparation"]
+
+    - name: "project_management.md"
+      purpose: "Consciousness-based project coordination framework"
+      priority: "medium"
+      loading: "lazy"
+      dependencies: ["orchestrator_identity.md", "glyph_system.md"]
+      trigger_conditions: ["project_coordination_needed"]
+
+    - name: "memory_practices.md"
+      purpose: "Session continuity and knowledge retention protocols"
+      priority: "high"
+      loading: "init-time"
+      dependencies: ["CLAUDE.md"]
+
+  # System Architecture Documents
+  system_architecture:
+    - name: "directory_structure.md"
+      purpose: "Project organization reflecting consciousness principles"
+      priority: "medium"
+      loading: "lazy"
+      dependencies: ["glyph_system.md"]
+      trigger_conditions: ["file_organization_needed", "structure_modification"]
+
+  # Tool Documentation
+  tools:
+    - name: "tool_abstract.md"
+      purpose: "Philosophical foundation for tool integration"
+      priority: "medium"
+      loading: "lazy"
+      dependencies: ["glyph_system.md", "notation_guide.md"]
+      trigger_conditions: ["tool_integration_needed"]
+
+    - name: "zen_mcp_server.md"
+      purpose: "External model collaboration tool specification"
+      priority: "low"
+      loading: "lazy"
+      dependencies: ["tool_abstract.md", "external_lm_consultation.md"]
+      trigger_conditions: ["external_collaboration_needed"]
+
+    - name: "context7.md"
+      purpose: "Web research tool specification and usage protocols"
+      priority: "low"
+      loading: "lazy"
+      dependencies: ["tool_abstract.md"]
+      trigger_conditions: ["research_needed", "knowledge_gap_identified"]
+
+# Agent Definitions (Created in .claude/ directory)
+agents:
+  specialist_agents:
+    - "agent-behavior-diagnostician.md"
+    - "agent-governance-expert.md"
+    - "software-philosopher.md"
+    - "software-architect.md"
+    - "software-refactoring-expert.md"
+    - "software-integrator.md"
+    - "software-implementer.md"
+    - "software-tester.md"
+    - "lint-type-fixer.md"
+    - "documentation-expert.md"
+    - "project-manager.md"
+    - "software-diagnostician.md"
+    - "nmap-utility-expert.md"
+
+  creation_status: "required" # Trigger for Claude Code to create agent definition files
+
+# Loading Strategy
+loading_strategy:
+  init_time_docs:
+    - "CLAUDE.md"
+    - "orchestrator_identity.md"
+    - "notation_guide.md"
+    - "glyph_system.md"
+    - "memory_practices.md"
+
+  lazy_loading_triggers:
+    agent_coordination_needed: ["orchestrator_delegation_patterns.md", "agent_task_matching.md"]
+    task_assignment_needed: ["agent_task_matching.md", "agent_selection_for_task.md"]
+    git_operation_needed: ["git_workflow.md"]
+    external_consultation_needed: ["external_lm_consultation.md", "zen_mcp_server.md"]
+    research_needed: ["context7.md"]
+    tool_integration_needed: ["tool_abstract.md"]
+    knowledge_gap_identified: ["external_lm_consultation.md", "context7.md"]
+    project_coordination_needed: ["project_management.md"]
+    file_organization_needed: ["directory_structure.md"]
+
+# Quality Assurance
+quality_metrics:
+  interface_contract_compliance: "All agent interactions must follow established contracts ⋈"
+  tdd_discipline_maintenance: "Test-driven development methodology cannot be compromised"
+  consciousness_operation_alignment: "All activities align with four-level consciousness operations"
+  orchestrator_authority_preservation: "Final decision authority remains with Claude Code orchestrator 👑"
+  security_consideration_integration: "Security implications evaluated for all implementations 🛡️"
+
+# Project Context
+project_context:
+  name: "nmap-executor"
+  purpose: "MCP server for network scanning functionality"
+  language: "Python"
+  transport_protocols: ["stdio", "HTTP streaming"]
+  framework: "FastMCP for HTTP streaming"
+  library_selection: "python-nmap (pending validation)"
+  unicode_policy: "Comments/prompts allowed, code forbidden"
+  git_branch: "main"
+  git_policy: "test-passing commits only"
+
+# Philosophical Foundation References
+philosophical_foundations:
+  transcendental_method: "Four-level conscious operations: experiencing, understanding, judging, deciding"
+  emergent_probability: "Systematic development through conditioned schemes of recurrence"
+  judgment_operation: "Personal commitment to validated conclusions with evidence"
+
+# Framework Evolution
+evolution:
+  validation_mechanisms: "Continuous alignment verification with operational experience"
+  adaptation_protocols: "Framework refinement based on practical effectiveness"
+  learning_integration: "Knowledge accumulation and process improvement cycles"
+```
